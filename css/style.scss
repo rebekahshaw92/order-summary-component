@@ -1,0 +1,151 @@
+@import "../scss/bootstrap-grid.scss";
+
+
+$font: 'Red Hat Display', sans-serif;
+$veryPaleBlue: hsl(225, 100%, 94%);
+$darkBlue: hsl(223, 47%, 23%);
+$brightBlue: hsl(245, 75%, 52%);
+$colour: grey;
+$textAlign: center;
+$desktop: 1440px;
+$mobile: 375px;
+
+body {
+    
+    background-color: $veryPaleBlue;
+    font-family: $font;
+    background-image: url("../images/pattern-background-mobile.svg"); 
+
+    @include media-breakpoint-up (lg) {
+        background-image: url("../images/pattern-background-desktop.svg");
+    }
+        
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%); 
+    } 
+}
+
+img {
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    width: 50%;
+}
+
+.card-title {
+    padding-top: 20px;
+    font-weight: 900;
+    font-size: 22px;
+    color: $darkBlue;
+    padding-bottom: 20px;
+    text-align: $textAlign;
+}
+
+.card-text {
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: $colour; 
+    text-align: $textAlign;  
+    padding-bottom: 20px;
+   @include media-breakpoint-up (xxl) {
+        padding-left: 30px;
+        padding-right: 30px; 
+        }
+    }
+
+.card-price {
+    color: $colour;
+    font-size: 12px;
+}
+
+.btn-primary {
+    background-color: $brightBlue;
+    font-size: 12px;
+    width: 100%;
+    font-weight: 900;
+    
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    @include media-breakpoint-up (xxl) {
+        height: 50px;
+    }
+}
+
+.btn-primary:hover {
+    background-color: $brightBlue;
+    opacity: 0.7;
+}
+
+.change {
+    @include media-breakpoint-up (sm){
+        font-size: 12px;
+    }
+}
+
+.change:hover {
+    color: $brightBlue;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.payment {
+    padding-top: 20px;
+}
+
+a.paymentText {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: $textAlign;
+    display: block; 
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+a.paymentText:hover {
+    font-weight: 700;
+}
+
+
+.image-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.card-main {
+    background: hsl(225, 100%, 98%);
+    border-radius: 12px;
+}
+
+.card-main-title {
+    font-weight: 900;
+    font-size: 12px;
+    @include media-breakpoint-up (xxl) {
+        font-size: 14px;
+    } 
+}
+
+.row {
+    padding-top: 20px;
+}
+
+.card {
+    margin: 0 auto; 
+    float: none; 
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-top: 2em;
+    border-radius: 2em;
+    width: 16rem;
+    overflow: hidden; 
+    @include media-breakpoint-up (xxl){
+    width: 22rem; 
+    }
+}
